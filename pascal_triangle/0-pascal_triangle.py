@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Pascals triangle module"""
 
 
@@ -7,9 +7,9 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triagnle = [[1]]
+    triangle = [[1]]
     for i in range(1, n):
-        prev = triagnle[-1]
+        prev = triangle[-1]
         row = [1]
         for j in range(len(prev) - 1):
             row.append(prev[j] + prev[j + 1])
