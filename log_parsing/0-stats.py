@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Reads stdin lines and computes metrics"""
 import sys
 
 
