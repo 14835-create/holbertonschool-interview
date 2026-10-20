@@ -37,10 +37,10 @@ def main():
             if line_count % 10 == 0:
                 print_stats(total_size, status_codes)
 
-        except KeyboardInterrupt:
-            pass
-        finally:
-            print_stats(total_size, status_codes)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        print_stats(total_size, status_codes)
 
 
 if __name__ == "__main__":
