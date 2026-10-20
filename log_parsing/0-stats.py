@@ -21,17 +21,17 @@ def main():
             parts = line.split()
 
             try:
-                status_code = int(parts[-2])
                 file_size = int(parts[-1])
+                total_size += file_size
+                status_code = int(parts[-2])
+
+                if status_code in valid_codes:
+                    status_codes[status_code] = (
+                            status_codes.get(status_code, 0) + 1
+                            )
+
             except (ValueError, IndexError):
-                continue
-
-            total_size += file_size
-
-            if status_code in valid_codes:
-                status_codes[status_code] = (
-                        status_codes.get(status_code, 0) + 1
-                        )
+                pass
 
             line_count += 1
 
